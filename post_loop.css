@@ -1,0 +1,140 @@
+@import url(https://fonts.googleapis.com/css?family=DM+Sans:regular,italic,500,500italic,700,700italic);
+@import url(https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: "dm sans";
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.single {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14px, 1fr));
+    align-items: center;
+    grid-template-rows: 7rem;
+    justify-items: center;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid gray;
+}
+
+.single a {
+    color: white;
+    text-decoration: none;
+}
+
+.image {
+    grid-column: 1 / 2;
+}
+
+.title_date {
+    grid-column: 2 / 12;
+}
+
+.excerpt {
+    grid-column: 2/12;
+    z-index: -1;}
+ 
+
+
+.image, .title_date, .excerpt {grid-row: 1/1;}
+
+
+.single:hover  .title_date{z-index: -2;} 
+
+
+.single:hover .excerpt{z-index:2;}
+.title_date {
+    /*font-size:1.2rem; */
+    justify-self: start;
+    align-self: center;
+    font-size: 2.2rem;
+    /*grid-column: span 16;*/
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.title_date span {
+    font-size: 0.5rem;
+}
+
+.excerpt {
+    justify-self: start;
+    align-self: center;
+    font-size: 1.5rem;
+    /*grid-column: span 3;*/
+    padding: 0.5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+img {
+    object-fit: cover;
+    /* width: 100%; */
+    height: auto;
+    /*grid-column: span 1;*/
+    border-radius: 50%;
+    width: 30px;
+    height: auto;
+}
+
+time, span, h1 {
+    margin: 0;
+    padding-left: 0.3rem;
+}
+
+time {
+    font-family: 'DM Mono', monospace;
+    font-size: 1rem;
+}
+
+/* .excerpt {display:none;}
+.single:hover .excerpt{display:block;} */
